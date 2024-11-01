@@ -1,0 +1,79 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.custom-card {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    height: 322px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#urlInput {
+    border-color: #007bff;
+}
+
+#result {
+    font-size: 1.1em;
+}
+
+.custom-font {
+    font-family: 'Poppins', sans-serif;
+}
+
+.custom-title {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+}
+
+#urlInput {
+    border: 2px solid #343a40;
+}
+
+#urlInput:focus {
+    border-color: #000;
+    box-shadow: none;
+}
+
+.short-url-link {
+    text-decoration: none;
+    color: #333;
+}
+
+.short-url-link:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+.copy-btn {
+    padding: 0.25rem 0.5rem;
+}
+
+.toast-notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.85);
+    color: #ffffff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateY(-10px);
+}
+
+.toast-notification.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.btn.btn-dark.btn-lg.mx-auto.d-block.rounded.custom-font i {
+    margin-top: 5px;
+}
+
