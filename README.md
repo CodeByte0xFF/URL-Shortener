@@ -21,7 +21,7 @@
 
 1. Клонируйте репозиторий:
    ```bash
-   git clone https://github.com/CodeByte0xFF/ShortLinks.git
+   git clone https://github.com/CodeByte0xFF/URL-Shortener.git
    ```
 2. Запустите docker контейнер:
    ```bash
