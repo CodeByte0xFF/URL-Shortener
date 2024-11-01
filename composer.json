@@ -2,7 +2,7 @@
   "name": "codebyte0xff/url_shortener",
   "description": "URL shortening service",
   "type": "project",
-  "license": "CC BY-NC-ND",
+  "license": "MIT",
   "authors": [
     {
       "name": "AMD",
