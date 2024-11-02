@@ -1,7 +1,11 @@
 services:
-  app:
-    image: php:8.1-fpm
-    container_name: php-app
+  app-apache:
+    build:
+      context: .
+      dockerfile: Dockerfile_apache
+    container_name: apache-php-app
+    ports:
+      - "80:80"
     volumes:
       - ./public:/var/www/html
       - ./app:/var/www/app
@@ -15,24 +19,6 @@ services:
       DB_NAME: postgres
       DB_USERNAME: username
       DB_PASSWORD: password
-    command: >
-      /bin/sh -c "apt-get update &&
-                  apt-get install -y libpq-dev &&
-                  docker-php-ext-install pdo pdo_pgsql &&
-                  php-fpm"
-
-  nginx:
-    image: nginx:latest
-    container_name: nginx-server
-    ports:
-      - "80:80"
-    volumes:
-      - ./public:/var/www/html
-      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
-    networks:
-      - app-network
-    depends_on:
-      - app
 
   db:
     image: postgres:latest

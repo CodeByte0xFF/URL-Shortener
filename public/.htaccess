@@ -1,0 +1,14 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([a-zA-Z0-9]+)$ /api/api.php?code=$1 [L,QSA]
+
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresDefault "access plus 45 days"
+
+    ExpiresByType image/* "access plus 45 days"
+
+    ExpiresByType application/javascript "access plus 45 days"
+    ExpiresByType text/css "access plus 45 days"
+</IfModule>
+

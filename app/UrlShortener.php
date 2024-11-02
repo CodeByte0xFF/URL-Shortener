@@ -15,7 +15,7 @@ class UrlShortener {
         return substr(str_shuffle("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"), 0, 5);
     }
 
-    public function createShortUrl($originalUrl): string{
+    public function createShortUrl($originalUrl): string {
         $stmt = $this->db->prepare("SELECT short_code FROM urls WHERE original_url = :url");
         $stmt->execute([':url' => $originalUrl]);
         $existingUrl = $stmt->fetch(PDO::FETCH_ASSOC);

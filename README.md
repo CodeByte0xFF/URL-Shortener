@@ -23,11 +23,22 @@
    ```bash
    git clone https://github.com/CodeByte0xFF/URL-Shortener.git
    ```
-2. Запустите docker контейнер:
+
+2. Запуск с разными конфигурациями:
+   - Для Apache:
+     ```bash
+     docker-compose -f docker-compose-apache.yml up -d
+     ```
+   - Для Nginx:
+     ```bash
+     docker-compose -f docker-compose-nginx.yml up -d
+     ```
+3. Остановка контейнеров:
    ```bash
-   docker-compose up --build -d
+   docker-compose -f <docker-compose-file.yml> down
    ```
-3. URL Shortener доступен в браузере: `http://localhost/`
+   
+4. URL Shortener доступен в браузере: `http://localhost/`
 
 ## Лицензия
 
